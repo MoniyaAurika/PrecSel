@@ -3,17 +3,58 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
+      <class name="facebookLoginTest.FbRadiobuttonTest"/>
+      <class name="prec.PriorityPrec"/>
       <class name="facebookLoginTest.FbEmailPass"/>
+      <class name="locators.FacebookLoc"/>
+      <class name="prec.Grouping"/>
+      <class name="prec.Prectrycatch"/>
+      <class name="prec.PracticeAssert"/>
+      <class name="prec.DependsOn"/>
+      <class name="base.Config"/>
+      <class name="facebookLoginTest.Login"/>
+      <class name="prec.AnnotationsPrec"/>
+      <class name="values.FbValues"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
+      <class name="prec.PriorityPrec">
+        <methods>
+          <include name="skip"/>
+        </methods>
+      </class> <!-- prec.PriorityPrec -->
+      <class name="facebookLoginTest.Login">
+        <methods>
+          <include name="testFacebookSignup"/>
+        </methods>
+      </class> <!-- facebookLoginTest.Login -->
       <class name="facebookLoginTest.FbEmailPass">
         <methods>
           <include name="testFacebookEmailPass"/>
-          <include name="beforetest"/>
         </methods>
       </class> <!-- facebookLoginTest.FbEmailPass -->
+      <class name="facebookLoginTest.FbRadiobuttonTest">
+        <methods>
+          <include name="testRadio"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- facebookLoginTest.FbRadiobuttonTest -->
+      <class name="prec.AnnotationsPrec">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="b4suite"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- prec.AnnotationsPrec -->
+      <class name="prec.PracticeAssert">
+        <methods>
+          <include name="trycatch"/>
+        </methods>
+      </class> <!-- prec.PracticeAssert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

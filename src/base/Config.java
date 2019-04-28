@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 public class Config {
 	public WebDriver driver;
 	@BeforeMethod
-	public void beforetest(){	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+	public void beforetest(){System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
 	// init the chrome driver
 	driver = new ChromeDriver();
 	// lets go to facebook.com
@@ -22,9 +22,9 @@ public class Config {
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
-	//@AfterMethod
-	//public void afterEachTest(){
-	//	driver.close();
+	@AfterMethod
+	public void afterEachTest(){
+    driver.close();
 	
-
+	}
 }
