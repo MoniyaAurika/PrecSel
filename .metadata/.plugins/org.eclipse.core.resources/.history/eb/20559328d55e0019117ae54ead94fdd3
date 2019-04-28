@@ -1,0 +1,15 @@
+package base;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+import util.Functions;
+
+public class Config extends Functions {
+	@BeforeTest
+public void brow(){
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arafat\\Documents\\GitHub\\Framework2019\\drivers\\chromedriver");
+	driver=new ChromeDriver();
+	driver.get("https://www.facebook.com/");
+}
+}

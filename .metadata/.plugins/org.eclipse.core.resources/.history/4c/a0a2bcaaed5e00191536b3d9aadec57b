@@ -1,0 +1,15 @@
+package testcases;
+
+import org.testng.annotations.Test;
+import base.Config;
+
+public class Prec extends Config {
+	
+	
+	@Test
+	public void test2(){
+		
+	}
+	
+
+}

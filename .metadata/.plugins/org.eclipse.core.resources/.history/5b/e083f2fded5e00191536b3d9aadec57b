@@ -1,0 +1,16 @@
+package util;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Functions {
+	public WebDriver driver;
+	
+	public void typebyxpath(String Locators,String Value){
+		driver.findElement(By.xpath(Locators)).sendKeys(Value);
+	}
+	public void typebyclick(String Locators){
+		driver.findElement(By.xpath(Locators)).click();
+	}
+}
+

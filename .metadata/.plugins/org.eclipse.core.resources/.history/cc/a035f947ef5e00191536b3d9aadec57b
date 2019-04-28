@@ -1,0 +1,12 @@
+package locator;
+
+public class Location {
+	public String ok="//*[@id='u_0_n']";
+	public String fnLoc = "//*[@id='u_0_c']";
+	public String LN="//*[@id='u_0_p']";
+	public String email="//*[@id='u_0_s']";
+	public String pass="//*[@id='u_0_z']";
+	public String signin="//*[@id='u_0_15']";
+
+
+}

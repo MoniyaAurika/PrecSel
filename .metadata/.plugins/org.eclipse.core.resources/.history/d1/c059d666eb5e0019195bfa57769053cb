@@ -1,0 +1,14 @@
+package testcases;
+
+import base.Config;
+
+public class Prec extends Config {
+	
+	
+	@Test
+	public void test2(){
+		
+	}
+	
+
+}

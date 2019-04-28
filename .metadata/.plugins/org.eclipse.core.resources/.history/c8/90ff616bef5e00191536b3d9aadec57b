@@ -1,0 +1,18 @@
+package util;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Functions {
+	public WebDriver driver;
+	public WebDriverWait wait;
+	
+	public void typeByXpath(String Locators,String Value){
+		driver.findElement(By.xpath(Locators)).sendKeys(Value);
+	}
+	public void typeByClick(String Locators){
+		driver.findElement(By.xpath(Locators)).click();
+	}
+}
+
